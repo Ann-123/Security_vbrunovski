@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Документ HTML5 -->
+<html lang="en"> <!-- Корневой элемент -->
+<head> <!-- Служебная информация -->
+    <meta charset="UTF-8">
+    <title>Form_1</title> <!-- Название страницы -->
+    <style>
+        table {
+            border: 2px solid rgba(180, 180, 180, 0.6);
+        }
+        td, th {
+            width: 100px;
+            height: 25px;
+            border: 2px solid rgba(180, 180, 180, 0.6);
+        }
+    </style>
+</head>
+<body> <!-- Видимое содержимое страницы -->
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: plum;">Name</th>
+                <th style="background-color: plum;">Value</th>
+            </tr>
+        </thead>
+        <tfoot>
+          <tr>
+              <td colspan="2">
+                  Describe your athletic ability:
+                  <div style="text-align: center">
+                      <textarea name="ability" rows="3" style="width: 97%"></textarea>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2" style="text-align: center;">
+              <button type="submit"> Enter my information</button>
+              </td>
+          </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="Sex" value="Male">
+                    Male<br>
+                    <input type="radio" name="Sex" value="Female" checked>
+                    Female<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Eye color</td>
+                <td>
+                    <select name="eys">
+                        <option value="green" selected>green</option>
+                        <option value="red">red</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all that apply</td>
+                <td>
+                    <input type="checkbox" name="apply" value="Over 6 feet tall">Over 6 feet tall<br>
+                    <input type="checkbox" name="apply" value="Over 200 pounds">Over 200 pounds<br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html> <!-- Документ HTML5 -->
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"> <!-- Корневой элемент -->
+<head>
+    <meta charset="UTF-8">
+    <title>Form_2</title> <!-- Название страницы -->
+    <style>
+        .breadcrumb {
+            list-style: none;
+            display: flex;
+        }
+        .breadcrumb a {
+            text-decoration: none
+        }
+        .breadcrumb li + li::before {
+            content: "-->";
+            padding: 0 3px;
+        }
+        .question {
+            display: grid;
+            grid-template-columns: 200px 40%;
+            gap: 20px 50px;
+            padding-top: 5px;
+            text-align: left;
+        }
+        .question input[type="text"],
+        .question select,
+        .question textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 3px;
+            border: 1px solid #999;
+        }
+        .two_field {
+        display: flex;
+        flex: 1;
+        gap: 5px;
+        }
+        .two_field input[type="text"] {
+        flex: 1;
+        padding: 4px;
+        box-sizing: border-box;
+        }
+        .two_field select,
+        .two_field input {
+        width: 200px;
+        padding: 4px;
+        box-sizing: border-box;
+        }
+        .line {
+        display: flex;
+        gap: 20px;
+        }
+        .line_gray {
+        border: none;
+        border-top: 1px solid;
+        margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Dynamic Converter New HTML Conversion Template Form</h1>
+<hr class="line" color="blue">
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li><a href="#">Administration</a></li>
+        <li><a href="#">Dynamic Converter Admin</a></li>
+        <li>Dynamic Converter New HTML Conversion Template Form</li>
+    </ul>
+</nav>
+<br>
+<div class="question" style="display: flex; gap: 20px">
+    <div style="width: 200px;">
+        <hr class="line_gray">
+    </div>
+    <div style="flex: 1;">
+        <hr class="line_gray">
+    </div>
+</div>
+<form>
+    <div class="question">
+        <label for="content_id">* Content ID</label>
+        <input class="field" id="content_id" name="content_id" required>
+    </div>
+    <div class="question">
+        <label>* Type</label>
+        <select name="type">
+            <option value="ADACCT - Acme Accounting Depatment">
+                ADACCT - Acme Accounting Depatment</option>
+        </select>
+    </div>
+    <div class="question">
+        <label for="title">* Title</label>
+        <input class="field" name="title" id="title" required>
+    </div>
+    <div class="question">
+        <label for="filer">* Filer</label>
+        <div class="two_field">
+            <input type="text" name="filer_name" value="sysadmin" id="filer">
+            <select name="filer_type">
+                <option value="sysadmin" selected>sysadmin</option>
+                <option value="admin">admin</option>
+            </select>
+        </div>
+    </div>
+    <div class="question">
+        <label>* Security Grop</label>
+        <select name="type" required>
+            <option value="Public">Public</option>
+        </select>
+    </div>
+    <div class="question" style="display: flex; gap: 20px">
+        <div style="width: 200px;">
+            <hr class="line_gray">
+        </div>
+        <div style="flex: 1;">
+            <hr class="line_gray">
+        </div>
+    </div>
+    <div style="color: red">
+        <label>Template Format</label>
+        <label>
+            <input type="radio"
+                   name="format"
+                   value="HTML Conversion Template" checked>
+                   HTML Conversion Template
+        </label>
+        <label>
+            <input type="radio"
+                   name="format"
+                   value="Classic HTML Conversion Template">
+                   Classic HTML Conversion Template
+        </label>
+    </div>
+    <div class="question" style="display: flex; gap: 20px">
+        <div style="width: 200px;">
+            <hr class="line_gray">
+        </div>
+        <div style="flex: 1;">
+            <hr class="line_gray">
+        </div>
+    </div>
+    <div class="question">
+        <label for="revision">* Revision</label>
+        <input class="field" name="revision" id="revision" required>
+    </div>
+    <br>
+    <div class="question">
+        <label for="add_file">Folder</label>
+        <div class="two_field">
+            <input type="text">
+            <input type="file" name="add_file" id="add_file">
+        </div>
+    </div>
+    <div class="question">
+        <label for="hidden">Hidden</label>
+        <select name="hidden" id="hidden">
+            <option value=""></option>
+        </select>
+    </div>
+    <div class="question">
+        <label for="big_text_1">Comments</label>
+        <textarea id="big_text_1"></textarea>
+    </div>
+    <div class="question">
+        <label for="big_text_2">User Access List</label>
+        <textarea id="big_text_2"></textarea>
+    </div>
+    <div class="question">
+        <label for="big_text_3">Trash Delete Old Name</label>
+        <textarea id="big_text_3"></textarea>
+    </div>
+    <div class="question">
+        <label for="add_name_1">Trash Delete Location</label>
+        <div class="two_field">
+            <input type="text">
+            <input type="file" name="add_file_1" id="add_name_1">
+        </div>
+    </div>
+    <div class="question">
+        <label for="calendar"> Trash Delete Date</label>
+        <input type="date" name="calendar" id="calendar">
+    </div>
+    <div class="question">
+        <label for="text">Trash Deleter</label>
+        <input type="text" id="text" name="text">
+    </div>
+</form>
+</body>
+</html>
