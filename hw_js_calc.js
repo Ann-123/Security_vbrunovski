@@ -25,7 +25,43 @@ function calculator(a, b, operator) {
         default:
         return "ERROR: unknown operator"
     }
-}
+};
+
+console.log(calculator(5, 2, "*"))
+console.log(calculator(1, 3, "+"))
+console.log(calculator(7, 2, "/"))
+console.log(calculator(4, 3, "-"))
+console.log(calculator(1, 0, "/"))
+console.log(calculator("1", 3, "+"))
+console.log(calculator(1, 3, "?"))
+
+
+// вариант чеерез if... else
+
+function calculator(a, b, operator) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        return "ERROR: enter a number"
+        }
+    else if (operator === "+") {
+        return a + b
+        }
+    else if (operator === "-") {
+        return a - b
+        }
+    else if (operator === "*") {
+        return a * b
+        }
+    else if (operator === "/") {
+        if (b === 0) {
+            return "Error: can`t divide by 0"
+            }
+        return a / b
+    }
+    else {
+        return "ERROR: unknown operator"
+        }
+    };
+
 
 console.log(calculator(5, 2, "*"))
 console.log(calculator(1, 3, "+"))
