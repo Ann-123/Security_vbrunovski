@@ -21,3 +21,59 @@ function showAllFlights() {
     }
 }
 showAllFlights()
+function findFlightByNumber(flightNumber) {
+    for (let flight of flights) {
+        if (flight.flightNumber === flightNumber) {
+            console.log(`Рейс найден ${flight.flightNumber}`)
+            console.log(`Летит в ${flight.destination}`)
+            console.log(`Время вылета в ${flight.departureTime}.`)
+            return
+        }
+    }
+    console.log("Рейс не найден")
+}
+findFlightByNumber("TK-456"); 
+findFlightByNumber("XX-000"); 
+
+function registerPassenger(flightNumber, passengerName) {
+    for (let flight of flights) {
+        if (flight.flightNumber === flightNumber) {
+            if (flight.passengers.length < flight.capacity) {
+                flight.passengers.push(passengerName)
+                console.log(`Пассажир ${passengerName} добавлен на рейс ${flightNumber}`)
+                return
+                }
+                else {
+                    console.log("На рейс нет свободных мест")
+                return
+            }
+        }
+    }
+    console.log("Рейс не найден")
+};
+registerPassenger("SU-123", "Иван");
+registerPassenger("SU-123", "Мария");
+registerPassenger("SU-123", "Петр");
+registerPassenger("XX-000", "Вася");
+
+function showFlightPassengers(flightNumber) {
+    for (let flight of flights) {
+        if (flight.flightNumber === flightNumber) {
+            console.log(`Пассажиры рейса ${flightNumber}:`)
+            for (let passenger of flight.passengers) {
+                console.log(passenger)
+            }
+                return
+            }
+        }
+    console.log("Рейс не найден")
+};
+showFlightPassengers("SU-123");
+showFlightPassengers("TK-456");
+
+function cancelFlight(flightNumber) {
+    flights = flights.filter(flight => flight.flightNumber !== flightNumber)
+    console.log(`Рейс ${flightNumber} успешно отменен`)
+};
+cancelFlight("TK-456");
+showAllFlights();
