@@ -6,9 +6,9 @@ const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!
 */
 
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+"
-function genpass(lenght) {
+function genpass(length) {
     let pass = ""
-    for (let i = 0; i < lenght; i++) {
+    for (let i = 0; i < length; i++) {
         let randomInd = Math.floor(Math.random() * charset.length)
         pass += charset[randomInd]
     }
