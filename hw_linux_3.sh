@@ -179,10 +179,13 @@ echo "Сумма чисел от 1го до 10ти равна: ${sum_2}"
 
 fse() {
 local sum_3=0
-for (( i=$1; i<=$2; i++)); do
+local i
+local start=$1
+local end=$2
+for (( i=start; i<=end; i++)); do
     sum_3=$(( sum_3 + i ))
 done
-echo "Сумма чисел равна ${sum_3}"
+echo "Сумма чисел от ${1} до ${2} равна ${sum_3}"
 }
 
 fse 1 10
