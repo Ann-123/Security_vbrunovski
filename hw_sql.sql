@@ -1,0 +1,25 @@
+ALTER TABLE students ADD COLUMN score INT DEFAULT NULL;
+SELECT * FROM students WHERE first_name LIKE 'A%' and YEAR(birth_date) > '1995';
+SELECT * FROM students WHERE score IN (4, 5) and id > 10;
+SELECT * FROM students WHERE MONTH(birth_date) IN (3, 4);
+SELECT * FROM students WHERE last_name LIKE 'S%' OR last_name LIKE 'D%';
+SELECT * FROM students WHERE id BETWEEN 20 AND 100 AND score > 3;
+SELECT * FROM students ORDER BY score DESC;
+SELECT * FROM students ORDER BY last_name, first_name;
+SELECT * FROM students WHERE DAY(birth_date) BETWEEN 1 AND 10;
+SELECT * FROM students WHERE first_name LIKE '%a%' AND score < 4;
+SELECT * FROM students ORDER BY score DESC LIMIT 5;
+SELECT * FROM students WHERE id NOT IN (1, 2, 3);
+SELECT * FROM students WHERE last_name LIKE '%о%';
+SELECT * FROM students WHERE score > 2 AND score < 5;
+SELECT * FROM students ORDER BY YEAR(birth_date);
+SELECT * FROM students WHERE first_name LIKE 'Т%' AND id > 50;
+SELECT * FROM students WHERE YEAR(birth_date) IN (1990, 1995, 2000);
+SELECT * FROM students WHERE score = 3 OR last_name LIKE 'В%';
+SELECT * FROM students WHERE id > 10 AND MONTH(birth_date) IN (6, 7, 8);
+SELECT * FROM students ORDER BY score, id;
+SELECT * FROM students WHERE CHAR_LENGTH(first_name) > 5;
+SELECT * FROM students WHERE last_name LIKE '%п' AND score = 5;
+SELECT * FROM students WHERE YEAR(birth_date) > 1998 ORDER BY birth_date;
+SELECT * FROM students WHERE id % 3 = 0;
+
